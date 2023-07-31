@@ -5,14 +5,14 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.m6room.Model.TextoDao
 
-abstract class Database:RoomDatabase() {
+abstract class TextoDatabase:RoomDatabase() {
 
     abstract fun getTextoDao():TextoDao
 
     companion object{
-        private var INSTANCE : Database?=null
+        private var INSTANCE : TextoDatabase?=null
 
-        fun getDataBase(context: Context): Database {
+        fun getDataBase(context: Context): TextoDatabase {
             val tempInstance= INSTANCE
             if(tempInstance!=null){
                 return tempInstance
@@ -20,7 +20,7 @@ abstract class Database:RoomDatabase() {
             synchronized(this){
                 val instance= Room.databaseBuilder(
                     context.applicationContext,
-                    Database::class.java,"room_db")
+                    TextoDatabase::class.java,"room_db")
                     .build()
                 INSTANCE =instance
                 return instance

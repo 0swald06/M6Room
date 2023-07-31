@@ -1,4 +1,4 @@
-package com.example.m6room
+package com.example.m6room.View
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -10,6 +10,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import com.example.m6room.R
 import com.example.m6room.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
